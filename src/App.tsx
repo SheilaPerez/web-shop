@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './Pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Beauty from './Pages/Beauty';
+import Menu from './Components/Menu';
+import Clothes from './Pages/Clothes';
+import Healthy from './Pages/Healthy';
+import { FC, useState } from 'react';
+import { CartContextProvider } from './Context/CartContext';
+interface Props {
+}
 
-function App() {
+const App: FC<Props> = () => {
+  const [cartState, setCartState] = useState([])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CartContextProvider value={{ cartState: cartState, setCartState: setCartState }}>
+        <Router>
+        <Menu></Menu> 
+          <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/beauty" element={<Beauty></Beauty>}></Route>
+            <Route path="/clothes" element={<Clothes></Clothes>}></Route>
+            <Route path="/healthy" element={<Healthy></Healthy>}></Route>
+          </Routes>
+        </Router>
+      </CartContextProvider>
+     
     </div>
   );
 }

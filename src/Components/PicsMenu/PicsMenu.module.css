@@ -1,0 +1,27 @@
+.beautyImage {
+    background-image: url('../../../public/beauty.jpg');
+}
+
+.clothesImage {
+    background-image: url('../../../public/clothes.jpeg');
+}
+
+.healthyImage {
+    background-image: url('../../../public/healthy.jpg');
+
+}
+.imageStyle {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-repeat: none;
+    border: 5px solid black;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px 0 grey;
+}
+
+.picsContent {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 170px;
+}

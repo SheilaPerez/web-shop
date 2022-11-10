@@ -1,0 +1,39 @@
+.menuContent {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #F4DFBA;
+    position: sticky;
+    z-index: 10;
+}
+
+.menuLink {
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menuLink:hover {
+    color: #FFAB76;
+}
+
+.title {
+    font-family: 'The Nautigal', cursive;
+    position: absolute;
+    font-size: 90px;
+    left: 50px;
+    top: -60px;
+    cursor: pointer;
+}
+
+.shopIcon {
+    cursor: pointer;
+}
+
+.shopIcon:hover {
+    color: white;
+}
