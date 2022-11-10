@@ -37,3 +37,14 @@
 .shopIcon:hover {
     color: white;
 }
+
+@media only screen and (max-width: 756px) {
+    .title {
+        font-size: 30px;
+        top: -12px;   
+    }
+
+    .menuLink {
+        font-size: 11px;
+    }
+}

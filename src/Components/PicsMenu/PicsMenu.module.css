@@ -25,3 +25,25 @@
     justify-content: space-evenly;
     margin-top: 170px;
 }
+
+@media only screen and (max-width: 972px) {
+    .picsContent {
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-top: 100px;
+        align-items: center;
+    }
+
+    .imageStyle {
+        width: 500px;
+        height: 300px;
+        margin-bottom: 30px;
+        background-position: bottom;
+    }
+}
+
+@media only screen and (max-width: 588px) {
+    .imageStyle {
+        width: 400px;
+    }
+}

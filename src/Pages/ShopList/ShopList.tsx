@@ -33,8 +33,12 @@ const ShopList = ( ) => {
     const handleClickQuantityMin = (productName: string) => {
         setCartState(
             cartState.map((cartProduct: CartProduct) => {
-                if (cartProduct.description === productName) {
+                if (cartProduct.description === productName && cartProduct.quantity > 0) {
                     cartProduct.quantity--;
+                } else if (cartProduct.description === productName && cartProduct.quantity === 0) {
+                    cartState.filter((product: CartProduct) => {
+                        return product.description !== productName;
+                    })
                 }
                 return cartProduct;
             })
