@@ -35,12 +35,10 @@ const ShopList = ( ) => {
             cartState.map((cartProduct: CartProduct) => {
                 if (cartProduct.description === productName && cartProduct.quantity > 0) {
                     cartProduct.quantity--;
-                } else if (cartProduct.description === productName && cartProduct.quantity === 0) {
-                    cartState.filter((product: CartProduct) => {
-                        return product.description !== productName;
-                    })
-                }
+                } 
                 return cartProduct;
+            }).filter((product) => {
+                return product.quantity > 0;
             })
         )
     }
@@ -57,7 +55,7 @@ const ShopList = ( ) => {
                                 <button type="button" className={styles.minPlusBtn}  onClick={() => handleClickQuantityPlus(product.description)}>+</button>
                             </div>
                             <img src={product.image} className={styles.productImgStyle}></img>
-                            <div>
+                            <div className={styles.descriptionContent}>
                                 <p className={styles.description}>{product.description}</p>
                                 <div className={styles.optionsCartProduct}>
                                     <p>{product.price * product.quantity}€</p>

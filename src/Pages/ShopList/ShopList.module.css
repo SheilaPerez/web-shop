@@ -67,3 +67,7 @@
     display: flex;
     align-items: center;
 }
+
+.descriptionContent {
+    width: 196px;
+}
