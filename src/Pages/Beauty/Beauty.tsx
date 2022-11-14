@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import CartContext, { CartProduct } from '../../Context/CartContext';
 import { Product } from '../../Shared/Product';
 import styles from './Beauty.module.css';
-
+import AddText from '../../Components/AddText';
 const Beauty = () => {
     const beautyProducts: Product[] = [
         {
@@ -46,6 +46,7 @@ const Beauty = () => {
     return (
         <div>
             <div className={styles.content}>
+            <AddText></AddText>
                 {beautyProducts.map((product: Product) => {
                     return (
                         <div onClick={() => handleclickProduct(product)} className={styles.productContent}>

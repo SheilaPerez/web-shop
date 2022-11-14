@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import AddText from '../../Components/AddText';
 import CartContext, { CartProduct } from '../../Context/CartContext';
 import { Product } from '../../Shared/Product';
 import styles from './Healthy.module.css';
@@ -44,6 +45,7 @@ const Healthy = () => {
 
     return (
         <div className={styles.content}>
+            <AddText></AddText>
             {healthyProducts.map((product) => {
                 return (
                     <div onClick={() => handleClickProduct(product)} className={styles.productContent}>
